@@ -1,7 +1,7 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
 
 // Google Fonts yükleyelim (fallback, index.html'de zaten var)
 if (!document.getElementById('roboto-font')) {
@@ -12,8 +12,9 @@ if (!document.getElementById('roboto-font')) {
   document.head.appendChild(link);
 }
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
-)
+  </React.StrictMode>
+);
