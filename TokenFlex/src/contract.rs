@@ -11,7 +11,7 @@ use crate::vesting::{
 };
 use crate::batch::{batch_transfer, BatchError};
 use crate::conditional::{
-    ConditionType, ConditionalTransfer, ConditionalError,
+    ConditionType, ConditionalError,
     create_conditional_transfer, execute_conditional_transfer
 };
 

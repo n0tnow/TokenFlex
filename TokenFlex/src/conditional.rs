@@ -1,5 +1,5 @@
 use soroban_sdk::{Address, Env, contracterror, contracttype};
-use crate::storage_types::{DataKey, INSTANCE_BUMP_AMOUNT, INSTANCE_LIFETIME_THRESHOLD};
+use crate::storage_types::{DataKey};
 
 #[contracterror]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, PartialOrd, Ord)]
@@ -103,9 +103,9 @@ pub fn execute_conditional_transfer(
                 return Err(ConditionalError::ConditionNotMet);
             }
         },
-        ConditionType::ApprovalRequired(approver_address) => {
+        ConditionType::ApprovalRequired(ref approver_address) => {
             if let Some(addr) = approver {
-                if addr != approver_address {
+                if addr != *approver_address {
                     return Err(ConditionalError::ConditionNotMet);
                 }
                 // Onaylayıcı yetkilendirmesi iste

@@ -27,8 +27,20 @@ import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import SwapHorizIcon from '@mui/icons-material/SwapHoriz';
 import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
 import MenuIcon from '@mui/icons-material/Menu';
+import { useWalletContext } from '../contexts/WalletContext'; // WalletContext eklendi
 
-function Header({ connected, publicKey, balance, tokenSymbol, onConnect, onDisconnect }) {
+function Header() {
+  // Props'ları kaldırıp, WalletContext kullanımı ekledik
+  const { 
+    connected, 
+    publicKey, 
+    balance, 
+    tokenSymbol, 
+    connectWallet, 
+    disconnectWallet, 
+    loading 
+  } = useWalletContext();
+  
   const theme = useTheme();
   const location = useLocation();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
@@ -47,7 +59,7 @@ function Header({ connected, publicKey, balance, tokenSymbol, onConnect, onDisco
   };
 
   const handleDisconnect = () => {
-    onDisconnect();
+    disconnectWallet(); // useWalletContext'ten gelen fonksiyon
     handleClose();
   };
 
@@ -274,8 +286,9 @@ function Header({ connected, publicKey, balance, tokenSymbol, onConnect, onDisco
           <Button 
             color="primary" 
             variant="contained" 
-            onClick={onConnect}
-            startIcon={<AccountBalanceWalletIcon />}
+            onClick={connectWallet} // useWalletContext'ten gelen fonksiyon
+            disabled={loading} // Yükleme durumunu ekledik
+            startIcon={loading ? null : <AccountBalanceWalletIcon />} // Yükleme durumunda icon'u kaldırdık
             sx={{ 
               ml: 2,
               background: `linear-gradient(45deg, ${theme.palette.primary.dark}, ${theme.palette.primary.main})`,
@@ -288,7 +301,7 @@ function Header({ connected, publicKey, balance, tokenSymbol, onConnect, onDisco
               }
             }}
           >
-            Connect Wallet
+            {loading ? 'Connecting...' : 'Connect Wallet'}
           </Button>
         )}
       </Toolbar>

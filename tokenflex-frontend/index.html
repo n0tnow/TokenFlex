@@ -1,10 +1,47 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
+    <meta name="description" content="TokenFlex - Soroban Token Interface for Stellar" />
+    <meta name="theme-color" content="#0f0f2d" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>TokenFlex</title>
+    <style>
+      /* Geçici yükleme durumu için basit bir stil */
+      #root:empty {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+        background: linear-gradient(135deg, #0f0f2d 0%, #1a1a3a 100%);
+        color: white;
+        font-family: 'Roboto', sans-serif;
+      }
+      
+      #root:empty::before {
+        content: "TokenFlex Yükleniyor...";
+        font-size: 24px;
+        font-weight: 500;
+        animation: pulse 1.5s infinite ease-in-out;
+      }
+      
+      @keyframes pulse {
+        0% { opacity: 0.6; }
+        50% { opacity: 1; }
+        100% { opacity: 0.6; }
+      }
+      
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #0f0f2d;
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>

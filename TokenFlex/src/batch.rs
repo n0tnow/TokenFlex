@@ -81,12 +81,12 @@ pub fn batch_transfer(
 
 // Tekrarlayan ödeme planla
 pub fn schedule_recurring_payment(
-    e: &Env,
-    from: Address,
-    to: Address,
-    amount: i128,
-    interval_ledgers: u32,
-    total_payments: u32,
+    _e: &Env,
+    _from: Address,
+    _to: Address,
+    _amount: i128,
+    _interval_ledgers: u32,
+    _total_payments: u32,
 ) {
     // Tekrarlayan ödemeler için uygulama
     // Bu, bir takvim oluşturmayı ve saklamayı içerir
