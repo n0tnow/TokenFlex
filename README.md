@@ -1,5 +1,8 @@
 ![ADB5DFC3-155A-4E1D-9222-D6B87C27B6D7](https://github.com/user-attachments/assets/f05b107a-6fc5-46c4-81c5-953e5f063fe8)
 
+## About Me
+Hello. I am Bilal Kaya, a third-year Software Engineering student at Beykoz University, studying on a full scholarship. With skills in C++, C#, Python, OOP, and web development frameworks like Django, I have built several projects, including a Bakery-Cafe Management System and a Fitness Center Management System. I am also proficient in developing RESTful APIs and working with SQL databases. I participated in several RiseIn  Bootcamps, where I deepened my knowledge of modern technologies and blockchain development. My goal is to build innovative, impactful solutions in the tech industry.
+
 # TokenFlex: Advanced Soroban Token Contract
 TokenFlex is a comprehensive token implementation built on the Soroban smart contract platform for the Stellar blockchain. It extends the standard token functionality with advanced features designed for sophisticated financial applications.
 
