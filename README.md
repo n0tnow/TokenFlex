@@ -6,6 +6,16 @@ Hello. I am Bilal Kaya, a third-year Software Engineering student at Beykoz Univ
 # TokenFlex: Advanced Soroban Token Contract
 TokenFlex is a comprehensive token implementation built on the Soroban smart contract platform for the Stellar blockchain. It extends the standard token functionality with advanced features designed for sophisticated financial applications.
 
+---
+
+## 🔗 Deployed Contract
+
+- **Stellar Testnet Contract ID:*CDWJXIJHGU2MSE7XBNPC7W55BFB2S3H355XRJD5X3BKEIOOFZVMRYN3S*
+- **View on Stellar Expert:**  
+[View Contract on Stellar Expert](https://stellar.expert/explorer/testnet/contract/CDWJXIJHGU2MSE7XBNPC7W55BFB2S3H355XRJD5X3BKEIOOFZVMRYN3S)
+
+---
+
 # 🌟 Features
 ## Core Token Features
 Standard Operations: Mint, transfer, burn tokens and manage allowances Admin Controls: Administrative functions for token management Metadata Management: Token name, symbol, and decimal information
